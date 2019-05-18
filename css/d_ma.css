@@ -164,6 +164,9 @@ a {
   color: #dbdbdb;
 }
 @media (max-device-width: 500px) {
+  .carouselExampleControls {
+    display: none;
+  }
   #menu-toggle {
     width: 1rem;
     height: 1rem;
