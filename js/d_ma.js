@@ -37,3 +37,28 @@ document.addEventListener('readystatechange', function() {
  init();
  }
 });
+   $(function() { 
+	var ele = document.getElementsByTagName('body')[0];   
+      $(".swipe-area").swipe( {
+        //Single swipe handler for left swipes
+        swipeRight:function(event, direction, distance, duration, fingerCount) {
+          addClass(ele, "open");
+        },
+		 swipeLeft:function(event, direction, distance, duration, fingerCount) {
+          removeClass(ele, "open");
+        },
+		
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+        threshold:0
+      });
+	  $("#menu").swipe( {
+        //Single swipe handler for left swipes
+       
+		 swipeLeft:function(event, direction, distance, duration, fingerCount) {
+          removeClass(ele, "open");
+        },
+		
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+        threshold:0
+      });
+    });

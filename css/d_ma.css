@@ -163,7 +163,7 @@ img{
 a {
   color: #dbdbdb;
 }
-@media (max-device-width: 500px) {
+@media (max-device-width: 800px) {
   .carouselExampleControls {
   display: none !important;
   }
@@ -180,14 +180,25 @@ a {
 
    }
   #menu-toggle {
+    
+    
     width: 2rem;
     height: 2rem;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
     background: #dbdbdb;
-    color: #fff;
+    color: #888;
     
   }
   
+}
+.swipe-area {
+    position: absolute;
+    width: 50px;
+    left: 0;
+top: 0;
+    height: 100%;
+  
+    z-index: 0;
 }
