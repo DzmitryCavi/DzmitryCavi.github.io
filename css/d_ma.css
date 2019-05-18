@@ -165,11 +165,29 @@ a {
 }
 @media (max-device-width: 500px) {
   .carouselExampleControls {
+  display: none !important;
+  }
+  h1 {
     display: none;
   }
+  body {
+    background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(img/IT-maintenance.jpg);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-clip: border-box;
+    background-size:cover;
+    
+
+   }
   #menu-toggle {
-    width: 1rem;
-    height: 1rem;
-    font-size: 1rem;
+    width: 2rem;
+    height: 2rem;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background: #dbdbdb;
+    color: #fff;
+    
   }
+  
 }
