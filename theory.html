@@ -11,7 +11,7 @@
     </title>
   </head>
   <body>
-
+<div class="swipe-area" id="LEFTFINGER"></div>
     <!-- левый выезжающий навигационный бар -->
     <nav class="nav flex-column bg-primary" id="menu" role="navigation">
       <a class="nav-link active" href="index.html">Главная</a>
@@ -23,7 +23,7 @@
     <main class="page-wrap">
 
       <!-- кнопка для навигационный бар -->
-      <button id="menu-toggle">
+      <button class="d-none d-lg-block" id="menu-toggle">
         <i class="font_icon_menu"></i>
       </button>
 
@@ -33,52 +33,58 @@
         </h1>
 
         <div class="row ">
-          <div class="to_sticky col-2">
+          <div class="to_sticky col-2 d-none d-lg-block">
             <div id="list-example" class="list-group  sticky-top ">
               <a class="list-group-item list-group-item-action" href="#list-item-1">Лекция 1</a>
               <a class="list-group-item list-group-item-action" href="#list-item-2">Лекция 2</a>
               <a class="list-group-item list-group-item-action" href="#list-item-3">Лекция 3</a>
               <a class="list-group-item list-group-item-action" href="#list-item-4">Лекция 4</a>
-              <a class="list-group-item list-group-item-action" href="#list-item-5">Лекция 5</a>
             </div>
           </div>
 
 
-          <div data-target="#list-example" data-offset="0" class="scrollspy-example col-10">
-            <h4 id="list-item-1" class="list-item">Item 1</h4>
+          <div data-target="#list-example" data-offset="0" class="scrollspy-example col-12 col-lg-10" id="Teory">
+            <h4 id="list-item-1" class="list-item">Тема 1</h4>
+            <p>
+              Отличие контроллера от процессора 
+В компе процессор вообще ничего не умеет(самостоятельно), умеет ввести вывести то что скажут. Ему помогает работать чипсет, микросхемы памяти, шины и другие устройства. 
+Микроконтроллер – маленький компьютер, где интегрирована и память, и устройства ввода вывода, и контроллер прерываний, и тактовый генератор в одном кристалле. То есть состоит из одной микросхемы. Он является самодостаточным.
+Процессор, для работы должен загрузить программу с диска или другой памяти. 
+Микроконтроллер имеет процедуру, которая перезаписывает память и он исполняет одну программу всегда. Для изменения функций микроконтроллера, необходимо перезаписывать его программу(число ограниченно).
+Микроконтроллеры используются во встраиваемой технике (пульт, в телефонных батареях)
+
+Контроллеры AVR
+Достаточно дешевый и популярный контроллер который встречается AVR.
+В 1996 году разработан компанией Atmel. Создан по принципам Галвардской архитектуры.
+Все находится на 1 чипе имеет разрядность 8 бит.
+Архитектура AVR.
+Микроконтроллер АВР (КАртинка).Имеет элементы обычного процессора 32 штуки регистров, АЛУ(сичтает), оперативная память(хранит значения при включеном компе), постоянная память(EEPROM), блок управления прерываниями(например нажатия кнопочек), SPI(интерфейс программирования или взаимодействия с другими устройствами, например для связывания контроллеров в сети), Watch doc (таймер, фактически микросхема генерирующая прерывания), Аналог компаратор(Работает с аналоговыми сигналами), и различные устройства ввода вывода и другие части.   
+Плата Ардуино(Картинка). Плата имеет микроконтроллер, а все остальное для его работы.
+Принципиальная схема Arduino. 
+
+            </p>
+
+            <h4 id="list-item-2" class="list-item">Тема 2</h4>
             <p>
               Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
                 Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
                   Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
             </p>
 
-            <h4 id="list-item-2" class="list-item">Item 2</h4>
+            <h4 id="list-item-3" class="list-item">Тема 3</h4>
             <p>
               Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
                 Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
                   Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
             </p>
 
-            <h4 id="list-item-3" class="list-item">Item 3</h4>
-            <p>
-              Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
-                Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
-                  Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
-            </p>
-
-            <h4 id="list-item-4" class="list-item">Item 4</h4>
+            <h4 id="list-item-4" class="list-item">Тема 4</h4>
             <p>
               Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
               Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
               Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
             </p>
 
-            <h4 id="list-item-5" class="list-item">Item 5</h4>
-            <p>
-              Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
-                Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
-                  Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.
-            </p>
 
           </div>
 
